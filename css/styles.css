@@ -1,0 +1,413 @@
+@font-face {
+    font-family: 'Inter-Regular';
+    font-display: swap;
+    src: local('Inter-Regular'),
+        url('../fonts/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    font-display: swap;
+    src: local('Inter-Bold'),
+        url('../fonts/Inter-Bold.woff') format('woff');
+}
+
+html {
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    min-width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter-Regular', sans-serif;
+    line-height: normal;
+    color: #000;
+}
+
+/* шапка */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.header__wrapper {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__icon {
+    position: relative;
+}
+
+.header__icon span {
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #fb2c36;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.header__content {}
+
+.header__title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header__text {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.header__btn {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 0 #0000000d;
+}
+
+.header__btn>svg {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.header__btn:hover {
+    background-color: whitesmoke;
+}
+
+/* основной блок */
+.main {
+    display: flex;
+    height: calc(100vh - 74px);
+}
+
+/* меню слева */
+.main__navigation {
+    border-right: 1px solid #ebebeb;
+}
+
+.main__menu {
+    padding: 24px;
+    width: 320px;
+    background-color: #fff;
+}
+
+.menu__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.menu__block {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.menu__block:last-child {
+    border: none;
+}
+
+.menu__title {
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.menu__items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.menu__btn {
+    padding: 7px 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.menu__btn>svg {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.menu__color {
+    margin-right: 14px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+#urgent .menu__color {
+    background-color: #fb2c36;
+}
+
+#high .menu__color {
+    background-color: #ff6900;
+}
+
+#medium .menu__color {
+    background-color: #f0b100;
+}
+
+#low .menu__color {
+    background-color: #00c951;
+}
+
+.menu__btn span {
+    margin-left: auto;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.menu__btn.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.menu__btn:hover {
+    background-color: whitesmoke;
+}
+
+.menu__btn.active:hover {
+    background-color: #171717;
+}
+
+.menu__btn.active>svg {
+    stroke: #fff;
+}
+
+/* блок с уведомлениями справа */
+.main__wrapper {
+    padding: 24px;
+    width: 100%;
+    background-color: #f6f9fb;
+}
+
+.main__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.main__card {
+    padding: 24px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+.card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.card__icon {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.card__icon>svg {
+    width: 16px;
+    height: 16px;
+}
+
+.card__content {}
+
+.card__block {
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.card__title {
+    margin: 0;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.card__status {
+    margin-right: 8px;
+    padding: 2px 8px;
+    border: 1px solid;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.card__status.urgent {
+    border-color: #fb2c36;
+    color: #fb2c36;
+}
+
+.card__status.high {
+    border-color: #ff6900;
+    color: #ff6900;
+}
+
+.card__status.medium {
+    border-color: #f0b100;
+    color: #f0b100;
+}
+
+.card__status.low {
+    border-color: #00c951;
+    color: #00c951;
+}
+
+.unread {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #2b7fff;
+}
+
+.card__text {
+    margin: 0;
+    margin-bottom: 8px;
+    color: #4a5565;
+}
+
+.card__client,
+.card__name,
+.card__phone {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.card__name,
+.card__phone {
+    gap: 4px;
+    font-size: 12px;
+    color: #6a7282;
+}
+
+.card__name>svg,
+.card__phone>svg {
+    width: 12px;
+    height: 12px;
+}
+
+.card__info {}
+
+.card__time {
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #6a7282;
+    text-align: right;
+}
+
+.card__value {
+    padding: 2px 8px;
+    border: 1px solid;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.card__value.operational {
+    border-color: #008236;
+    color: #008236;
+}
+
+.card__value.communications {
+    border-color: #8200db;
+    color: #8200db;
+}
+
+.card__value.life-cycle {
+    border-color: #1447e6;
+    color: #1447e6;
+}
+
+.card__value.system {
+    border-color: #364153;
+    color: #364153;
+}
+
+.card__value.analytics {
+    border-color: #432dd7;
+    color: #432dd7;
+}
+
+.card__value.integrations {
+    border-color: #007a74;
+    color: #007a74;
+}
+
+.card__value.safety {
+    border-color: #c10007;
+    color: #c10007;
+}
+
+.card__value.support {
+    border-color: #ca3500;
+    color: #ca3500;
+}
+
+.card__bottom {}
