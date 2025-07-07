@@ -18,10 +18,12 @@
                         <path d="M10.268 21a2 2 0 0 0 3.464 0"></path>
                         <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path>
                     </svg>
+                    <!-- кол-во непрочитанных уведомлений, если 0 - то скрываем -->
                     <span>7</span>
                 </div>
                 <div class="header__content">
                     <h1 class="header__title">Панель уведомлений</h1>
+                    <!-- фиксируем кол-во непрочитанных уведомлений -->
                     <p class="header__text">7 непрочитанных уведомлений</p>
                 </div>
             </div>
@@ -57,6 +59,7 @@
                                     <circle cx="12" cy="7" r="4"></circle>
                                 </svg>
                                 Жизненный цикл
+                                <!-- кол-во таких уведомлений -->
                                 <span>2</span>
                             </button>
                             <button id="operational" class="menu__btn">
@@ -66,6 +69,7 @@
                                     <circle cx="12" cy="12" r="2"></circle>
                                 </svg>
                                 Операционные
+                                <!-- кол-во таких уведомлений -->
                                 <span>2</span>
                             </button>
                             <button id="communications" class="menu__btn">
@@ -73,6 +77,7 @@
                                     <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
                                 </svg>
                                 Коммуникации
+                                <!-- кол-во таких уведомлений -->
                                 <span>2</span>
                             </button>
                             <button id="system" class="menu__btn">
@@ -81,6 +86,7 @@
                                     <circle cx="12" cy="12" r="3"></circle>
                                 </svg>
                                 Системные
+                                <!-- кол-во таких уведомлений -->
                                 <span>1</span>
                             </button>
                             <button id="support" class="menu__btn">
@@ -88,6 +94,7 @@
                                     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
                                 </svg>
                                 Поддержка
+                                <!-- кол-во таких уведомлений -->
                                 <span>1</span>
                             </button>
                             <button id="analytics" class="menu__btn">
@@ -96,6 +103,7 @@
                                     <polyline points="16 7 22 7 22 13"></polyline>
                                 </svg>
                                 Аналитика
+                                <!-- кол-во таких уведомлений -->
                                 <span>1</span>
                             </button>
                             <button id="integrations" class="menu__btn">
@@ -105,6 +113,7 @@
                                     <path d="M3 12A9 3 0 0 0 21 12"></path>
                                 </svg>
                                 Интеграции
+                                <!-- кол-во таких уведомлений -->
                                 <span>1</span>
                             </button>
                             <button id="safety" class="menu__btn">
@@ -113,6 +122,7 @@
                                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                                 </svg>
                                 Безопасность
+                                <!-- кол-во таких уведомлений -->
                                 <span>1</span>
                             </button>
                         </div>
@@ -129,21 +139,25 @@
                             <button id="urgent" class="menu__btn">
                                 <div class="menu__color"></div>
                                 Срочно
+                                <!-- кол-во таких уведомлений -->
                                 <span>2</span>
                             </button>
                             <button id="high" class="menu__btn">
                                 <div class="menu__color"></div>
                                 Высокий
+                                <!-- кол-во таких уведомлений -->
                                 <span>3</span>
                             </button>
                             <button id="medium" class="menu__btn">
                                 <div class="menu__color"></div>
                                 Средний
+                                <!-- кол-во таких уведомлений -->
                                 <span>3</span>
                             </button>
                             <button id="low" class="menu__btn">
                                 <div class="menu__color"></div>
                                 Низкий
+                                <!-- кол-во таких уведомлений -->
                                 <span>3</span>
                             </button>
                         </div>
@@ -165,9 +179,11 @@
         <!-- уведомления справа -->
         <div class="main__wrapper">
             <div class="main__list">
+                <!-- когда нажали = прочитали, добавлять класс "read" и "active" -->
                 <div class="main__card card">
                     <div class="card__top">
                         <div class="card__wrapper">
+                            <!-- тут меняется иконка и в зависимости от иконки цвет фона у её родителя -->
                             <div class="card__icon" style="background-color: #f0fdf4;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#188e49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
@@ -178,7 +194,9 @@
                             <div class="card__content">
                                 <div class="card__block">
                                     <h3 class="card__title">Напоминание о встрече</h3>
+                                    <!-- дополнительные классы в статусе окрашивают его в соответствующий цвет -->
                                     <div class="card__status high">Высокий</div>
+                                    <!-- кружочек "unread" пропадает, если уведомление прочитано -->
                                     <span class="unread"></span>
                                 </div>
                                 <p class="card__text">
@@ -203,6 +221,7 @@
                         </div>
                         <div class="card__info">
                             <div class="card__time">2 мин назад</div>
+                            <!-- дополнительные классы в значении окрашивают его в соответствующий цвет -->
                             <div class="card__value operational">Операционные</div>
                         </div>
                     </div>
@@ -214,13 +233,221 @@
                                 <rect width="18" height="18" x="3" y="4" rx="2"></rect>
                                 <path d="M3 10h18"></path>
                             </svg>
-                            <div class="card__descr"></div>
-                            <div class="card__txt"></div>
+                            <div class="card__descr">Встреча через 14 мин</div>
+                            <div class="card__txt">• Офис на Ленина, 45</div>
                         </div>
                         <div class="card__buttons">
-                            <button id="confirm-btn" class="card__btn">Подтвердить</button>
-                            <button id="reschedule-btn" class="card__btn">Перенести</button>
-                            <button id="cancel-btn" class="card__btn">Отменить</button>
+                            <button class="card__btn">Подтвердить</button>
+                            <button class="card__btn">Перенести</button>
+                            <button class="card__btn">Отменить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__card card">
+                    <div class="card__top">
+                        <div class="card__wrapper">
+                            <div class="card__icon" style="background-color: #f0fdf4;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#188e49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__block">
+                                    <h3 class="card__title">Назначена срочная задача</h3>
+                                    <div class="card__status urgent">Срочно</div>
+                                    <span class="unread"></span>
+                                </div>
+                                <p class="card__text">
+                                    Обратный звонок клиенту - приоритет "немедленно"
+                                </p>
+                                <div class="card__client">
+                                    <div class="card__name">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6a7282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                        Козлов Дмитрий Александрович
+                                    </div>
+                                    <div class="card__phone">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6a7282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                                        </svg>
+                                        +7 (934) 567-89-01
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <div class="card__time">5 мин назад</div>
+                            <div class="card__value operational">Операционные</div>
+                        </div>
+                    </div>
+                    <div class="card__bottom">
+                        <div class="card__message">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <div class="card__descr" style="color: #ff6900;">Выполнить: через 14 минут</div>
+                        </div>
+                        <div class="card__buttons">
+                            <button class="card__btn">Принять задачу</button>
+                            <button class="card__btn">Перенести</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__card card">
+                    <div class="card__top">
+                        <div class="card__wrapper">
+                            <div class="card__icon" style="background-color: #faf5ff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8200db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                                </svg>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__block">
+                                    <h3 class="card__title">Пропущенный звонок</h3>
+                                    <div class="card__status urgent">Высокий</div>
+                                    <span class="unread"></span>
+                                </div>
+                                <p class="card__text">
+                                    Клиент пытался дозвониться 3 раза
+                                </p>
+                                <div class="card__client">
+                                    <div class="card__name">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6a7282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                        Николаев Сергей Петрович
+                                    </div>
+                                    <div class="card__phone">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6a7282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                                        </svg>
+                                        +7 (956) 789-01-23
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <div class="card__time">10 мин назад</div>
+                            <div class="card__value communications">Коммуникации</div>
+                        </div>
+                    </div>
+                    <div class="card__bottom">
+                        <div class="card__message">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fb2c36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                            </svg>
+                            <div class="card__descr" style="color: #c20007">Пропущено звонков: 3</div>
+                        </div>
+                        <div class="card__buttons">
+                            <button class="card__btn">Перезвонить</button>
+                            <button class="card__btn">Отправить SMS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__card card">
+                    <div class="card__top">
+                        <div class="card__wrapper">
+                            <div class="card__icon" style="background-color: #eff6ff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1447e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__block">
+                                    <h3 class="card__title">Клиент изменил статус</h3>
+                                    <div class="card__status urgent">Высокий</div>
+                                    <span class="unread"></span>
+                                </div>
+                                <p class="card__text">
+                                    Иванов Пётр Сергеевич перешёл в статус "Заказал"
+                                </p>
+                                <div class="card__client">
+                                    <div class="card__name">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6a7282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                        Иванов Пётр Сергеевич
+                                    </div>
+                                    <div class="card__phone">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6a7282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                                        </svg>
+                                        +7 (912) 345-67-89
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <div class="card__time">15 мин назад</div>
+                            <div class="card__value life-cycle">Жизненный цикл</div>
+                        </div>
+                    </div>
+                    <div class="card__bottom">
+                        <div class="card__buttons">
+                            <button class="card__btn">Открыть карточку</button>
+                            <button class="card__btn">Создать задачу</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__card card read">
+                    <div class="card__top">
+                        <div class="card__wrapper">
+                            <div class="card__icon" style="background-color: #faf5ff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8200db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                                </svg>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__block">
+                                    <h3 class="card__title">Пропущенный звонок</h3>
+                                    <div class="card__status medium">Средний</div>
+                                    <span class="unread"></span>
+                                </div>
+                                <p class="card__text">
+                                    Клиент прислал фото участка для оценки
+                                </p>
+                                <div class="card__client">
+                                    <div class="card__name">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6a7282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                        Фёдорова Ольга Николаевна
+                                    </div>
+                                    <div class="card__phone">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6a7282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                                        </svg>
+                                        +7 (967) 890-12-34
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__info">
+                            <div class="card__time">20 мин назад</div>
+                            <div class="card__value communications">Коммуникации</div>
+                        </div>
+                    </div>
+                    <div class="card__bottom">
+                        <div class="card__message chat">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00c951" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <div class="card__descr">
+                                Добрый день! Высылаю фото участка...
+                            </div>
+                        </div>
+                        <div class="card__buttons">
+                            <button class="card__btn">Ответить</button>
+                            <button class="card__btn">Открыть чат</button>
                         </div>
                     </div>
                 </div>
