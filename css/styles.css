@@ -508,6 +508,10 @@ body {
 
 .card__btn {
     padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     font-size: 14px;
     text-align: center;
     border: 1px solid #e5e5e5;
