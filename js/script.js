@@ -48,14 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (cardValue) {
           const cardCategory = cardValue.className.split(" ").find(cls => cls !== "card__value");
           const categoryMapping = {
-            "life-cycle": "life-cycle",
-            "operational": "operational",
+            "my-clients": "my-clients",
             "communications": "communications",
-            "system": "system",
             "support": "support",
             "analytics": "analytics",
-            "integrations": "integrations",
-            "safety": "safety"
+            "discipline": "discipline"
           };
           const expectedClass = categoryMapping[categoryFilter];
           if (cardCategory !== expectedClass) {
