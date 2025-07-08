@@ -20,20 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const btns = block.querySelectorAll(".menu__btn");
     btns.forEach((btn) => {
       btn.addEventListener("click", function () {
-        // Проверяем, является ли кликнутая кнопка "filter-btn"
+        // проверяем, является ли кликнутая кнопка "filter-btn"
         if (btn.id === "filter-btn") {
-          // Если кнопка уже активна, убираем активный класс
+          // если кнопка уже активна, убираем активный класс
           if (btn.classList.contains("active")) {
             btn.classList.remove("active");
           } else {
-            // Убираем активный класс у всех кнопок и добавляем активный класс к текущей
+            // убираем активный класс у всех кнопок и добавляем активный класс к текущей
             btns.forEach((btn) => {
               btn.classList.remove("active");
             });
             btn.classList.add("active");
           }
         } else {
-          // Убираем активный класс у всех кнопок и добавляем активный класс к текущей
+          // убираем активный класс у всех кнопок и добавляем активный класс к текущей
           btns.forEach((btn) => {
             btn.classList.remove("active");
           });
@@ -45,9 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // прочитать все уведомления
   const readAllBtn = document.querySelector(".header__btn");
+  const filterBtnSpan = document.querySelector("#filter-btn span");
+  const headerText = document.querySelector(".header__text");
+  const headerCount = document.querySelector(".header__icon span");
   readAllBtn.addEventListener("click", function () {
     cards.forEach((card) => {
       card.classList.add("read");
     });
+    headerText.textContent = "Все уведомления прочитаны";
+    headerCount.textContent = "0";
+    filterBtnSpan.textContent = "0";
+    headerCount.classList.add("read");
   });
 });
