@@ -67,7 +67,7 @@ body {
 .header__block {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .header__icon {
