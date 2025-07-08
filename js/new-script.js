@@ -42,20 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // функция для фильтрации карточек
   function filterCards() {
-    const activeCategoryBtn = document.querySelector(
-      ".menu__block:nth-child(1) .menu__btn.active"
-    );
-    const activePriorityBtn = document.querySelector(
-      ".menu__block:nth-child(2) .menu__btn.active"
-    );
+    const activeCategoryBtn = document.querySelector(".menu__block:nth-child(1) .menu__btn.active");
+    const activePriorityBtn = document.querySelector(".menu__block:nth-child(2) .menu__btn.active");
     const filterBtn = document.querySelector("#filter-btn");
 
-    const categoryFilter = activeCategoryBtn
-      ? activeCategoryBtn.id
-      : "all-categories";
-    const priorityFilter = activePriorityBtn
-      ? activePriorityBtn.id
-      : "all-priority";
+    const categoryFilter = activeCategoryBtn ? activeCategoryBtn.id : "all-categories";
+    const priorityFilter = activePriorityBtn ? activePriorityBtn.id : "all-priority";
     const showOnlyUnread = filterBtn.classList.contains("active");
 
     cards.forEach((card) => {
@@ -65,19 +57,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (categoryFilter !== "all-categories") {
         const cardValue = card.querySelector(".card__value");
         if (cardValue) {
-          const cardCategory = cardValue.className
-            .split(" ")
-            .find((cls) => cls !== "card__value");
+          const cardCategory = cardValue.className.split(" ").find((cls) => cls !== "card__value");
           // создаем соответствие между id кнопок и классами карточек
           const categoryMapping = {
-            "life-cycle": "life-cycle",
-            operational: "operational",
+            "my-clients": "my-clients",
             communications: "communications",
-            system: "system",
             support: "support",
             analytics: "analytics",
-            integrations: "integrations",
-            safety: "safety",
+            discipline: "discipline",
           };
 
           const expectedClass = categoryMapping[categoryFilter];
@@ -91,9 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (priorityFilter !== "all-priority" && showCard) {
         const cardStatus = card.querySelector(".card__status");
         if (cardStatus) {
-          const cardPriority = cardStatus.className
-            .split(" ")
-            .find((cls) => cls !== "card__status");
+          const cardPriority = cardStatus.className.split(" ").find((cls) => cls !== "card__status");
           if (cardPriority !== priorityFilter) {
             showCard = false;
           }

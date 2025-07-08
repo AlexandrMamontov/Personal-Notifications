@@ -1,0 +1,15 @@
+@media screen and (max-width: 1366px) {
+    .card__top {
+        flex-wrap: wrap;
+    }
+
+    .card__wrapper {
+        max-width: fit-content;
+    }
+
+    .card__bottom {
+        margin-left: 44px;
+        max-width: 100%;
+        order: 1;
+    }
+}

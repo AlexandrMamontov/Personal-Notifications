@@ -241,11 +241,13 @@ body {
     stroke: #fff;
 }
 
-#filter-btn.menu__btn span {
+#filter-btn.menu__btn span,
+#hidden-btn.menu__btn span {
     display: none;
 }
 
-#filter-btn.menu__btn.active span {
+#filter-btn.menu__btn.active span,
+#hidden-btn.menu__btn.active span {
     display: flex;
 }
 
@@ -263,10 +265,7 @@ body {
 }
 
 .main__card {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    padding: 24px 12px;
     border: 1px solid #e5e5e5;
     border-radius: 8px;
     cursor: pointer;
@@ -292,29 +291,20 @@ body {
         0 2px 4px -2px #0000001a;
 }
 
-.main__card.active {
-    box-shadow: 0 0 0 2px oklch(80.9% .105 251.813),
-        0 1px 3px 0 #0000001a,
-        0 1px 2px -1px #0000001a;
-}
-
-.main__card.active:hover {
-    box-shadow: 0 0 0 2px oklch(80.9% .105 251.813),
-        0 4px 6px -1px #0000001a,
-        0 2px 4px -2px #0000001a;
-}
-
 .card__top {
-    padding-bottom: 20px;
+    position: relative;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10px 30px;
 }
 
 .card__wrapper {
     display: flex;
     align-items: flex-start;
     gap: 12px;
+    max-width: calc(100% - 400px - 250px);
+    width: 100%;
 }
 
 .card__icon {
@@ -329,7 +319,9 @@ body {
     height: 16px;
 }
 
-.card__content {}
+.card__content {
+    width: 100%;
+}
 
 .card__block {
     margin-bottom: 4px;
@@ -344,7 +336,6 @@ body {
 }
 
 .card__status {
-    margin-right: 8px;
     padding: 2px 8px;
     border: 1px solid;
     border-radius: 8px;
@@ -372,6 +363,7 @@ body {
 }
 
 .unread {
+    margin-left: 8px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -389,19 +381,21 @@ body {
     color: #4a5565;
 }
 
-.card__client,
-.card__name,
-.card__phone {
+.card__client {
     display: flex;
     align-items: center;
-    gap: 16px;
+    flex-wrap: wrap;
+    gap: 8px 16px;
 }
 
 .card__name,
 .card__phone {
+    display: flex;
+    align-items: center;
     gap: 4px;
     font-size: 12px;
     color: #6a7282;
+    white-space: nowrap;
 }
 
 .card__name>svg,
@@ -410,13 +404,25 @@ body {
     height: 12px;
 }
 
-.card__info {}
+.card__info {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.card__hidden {
+    width: 16px;
+    height: 16px;
+    background-color: tomato;
+}
 
 .card__time {
-    margin-bottom: 4px;
     font-size: 12px;
     color: #6a7282;
     text-align: right;
+    white-space: nowrap;
 }
 
 .card__value {
@@ -424,11 +430,7 @@ body {
     border: 1px solid;
     border-radius: 8px;
     font-size: 12px;
-}
-
-.card__value.operational {
-    border-color: #008236;
-    color: #008236;
+    white-space: nowrap;
 }
 
 .card__value.communications {
@@ -436,14 +438,9 @@ body {
     color: #8200db;
 }
 
-.card__value.life-cycle {
+.card__value.my-clients {
     border-color: #1447e6;
     color: #1447e6;
-}
-
-.card__value.system {
-    border-color: #364153;
-    color: #364153;
 }
 
 .card__value.analytics {
@@ -451,12 +448,7 @@ body {
     color: #432dd7;
 }
 
-.card__value.integrations {
-    border-color: #007a74;
-    color: #007a74;
-}
-
-.card__value.safety {
+.card__value.discipline {
     border-color: #c10007;
     color: #c10007;
 }
@@ -467,13 +459,8 @@ body {
 }
 
 .card__bottom {
-    display: none;
-    padding-top: 12px;
-    border-top: 1px solid #ebebeb;
-}
-
-.main__card.active .card__bottom {
-    display: block;
+    max-width: 400px;
+    width: 100%;
 }
 
 .card__message {
@@ -482,32 +469,15 @@ body {
     align-items: center;
 }
 
-.card__message.chat {
-    padding: 12px;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #f9fafb;
-    border-radius: 8px;
-}
-
 .card__message>svg {
     margin-right: 8px;
     width: 16px;
     height: 16px;
 }
 
-.card__message.chat>svg {
-    margin-right: 0;
-    margin-bottom: 4px;
-}
-
 .card__descr {
     margin-right: 8px;
     font-size: 14px;
-}
-
-.card__message.chat .card__descr {
-    margin-right: 0;
 }
 
 .card__txt {
