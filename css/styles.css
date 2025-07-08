@@ -519,6 +519,10 @@ body {
     text-decoration: none;
 }
 
+.card__buttons.reminder .card__btn  {
+    font-size: 12px;
+}
+
 .card__btn:hover {
     background-color: whitesmoke;
     text-decoration: none;
