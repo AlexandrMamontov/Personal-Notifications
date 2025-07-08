@@ -413,9 +413,23 @@ body {
 }
 
 .card__hidden {
-    width: 16px;
-    height: 16px;
-    background-color: tomato;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+.card__hidden::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%236a7282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>');
+}
+
+.main__card.hidden {
+    display: none;
+}
+
+.main__card.hidden .card__hidden::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%236a7282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-10-7-10-7a18.06 18.06 0 0 1 4.51-4.51M19.73 10.73A10.05 10.05 0 0 1 22 13c0 0-3 7-10 7-2.06 0-4.07-.9-5.83-2.34m-2.52-2.52L2 13s3 7 10 7 10-7 10-7-3-7-10-7c-.76 0-1.5.12-2.2.35"></path><path d="M6 6l12 12"></path><circle cx="12" cy="12" r="3"></circle></svg>');
 }
 
 .card__time {
